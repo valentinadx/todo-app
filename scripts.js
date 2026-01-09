@@ -1,102 +1,66 @@
-        function saveTodos() {
-    const todos = [];
-    document.querySelectorAll('#todo-list li').forEach(li => {
-        todos.push({
-        text: li.querySelector('span').textContent,
-        completed: li.classList.contains('completed')
-        });
+const todoInput = document.getElementById('new-todo');
+const addButton = document.getElementById('add-todo');
+const todoList = document.getElementById('todo-list');
+
+function saveTodos() {
+  const todos = [];
+  document.querySelectorAll('#todo-list li').forEach(li => {
+    todos.push({
+      text: li.querySelector('span').textContent,
+      completed: li.classList.contains('completed')
     });
-    localStorage.setItem('todos', JSON.stringify(todos));
-    }
+  });
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
 
-    function loadTodos() {
-    const saved = JSON.parse(localStorage.getItem('todos')) || [];
-    saved.forEach(todo => addTodoFromStorage(todo));
-    }
+function loadTodos() {
+  const saved = JSON.parse(localStorage.getItem('todos')) || [];
+  saved.forEach(todo => addTodoFromStorage(todo));
+}
 
-    const todoInput = document.getElementById('new-todo');
-    const addButton = document.getElementById('add-todo');
-    const todoList = document.getElementById('todo-list');
+function addTodo() {
+  const todoText = todoInput.value.trim();
+  if (!todoText) return;
 
-        // Funktion um eine Aufgabe hinzuzufügen die gespeichert wird
-    function addTodo() {
-    const todoText = todoInput.value.trim();
-    if (!todoText) return;
+  addTodoFromStorage({ text: todoText, completed: false });
+  todoInput.value = '';
+  saveTodos();
+}
 
-    const listItem = document.createElement('li');
+function addTodoFromStorage(todo) {
+  const listItem = document.createElement('li');
 
-    // Checkbox
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = todo.completed;
 
-    checkbox.addEventListener('change', () => {
-        listItem.classList.toggle('completed', checkbox.checked);
-    });
+  if (todo.completed) listItem.classList.add('completed');
 
-    // Text
-    const textSpan = document.createElement('span');
-    textSpan.textContent = todoText;
-
-    // Löschen-Button
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Löschen';
-    deleteBtn.addEventListener('click', () => {
-        todoList.removeChild(listItem);
-    });
-
-    listItem.appendChild(checkbox);
-    listItem.appendChild(textSpan);
-    listItem.appendChild(deleteBtn);
-
-    todoList.appendChild(listItem);
-
-    todoInput.value = '';
-    todoInput.focus();
+  checkbox.addEventListener('change', () => {
+    listItem.classList.toggle('completed', checkbox.checked);
     saveTodos();
-    }
+  });
 
-    function addTodoFromStorage(todo) {
-    const listItem = document.createElement('li');
+  const textSpan = document.createElement('span');
+  textSpan.textContent = todo.text;
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = todo.completed;
+  const deleteBtn = document.createElement('button');
+  deleteBtn.textContent = 'Löschen';
+  deleteBtn.addEventListener('click', () => {
+    todoList.removeChild(listItem);
+    saveTodos();
+  });
 
-    if (todo.completed) {
-        listItem.classList.add('completed');
-    }
+  listItem.appendChild(checkbox);
+  listItem.appendChild(textSpan);
+  listItem.appendChild(deleteBtn);
+  todoList.appendChild(listItem);
+}
 
-    checkbox.addEventListener('change', () => {
-        listItem.classList.toggle('completed', checkbox.checked);
-        saveTodos();
-    });
+addButton.addEventListener('click', addTodo);
+todoInput.addEventListener('keypress', e => {
+  if (e.key === 'Enter') addTodo();
+});
 
-    const textSpan = document.createElement('span');
-    textSpan.textContent = todo.text;
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Löschen';
-    deleteBtn.addEventListener('click', () => {
-        todoList.removeChild(listItem);
-        saveTodos();
-    });
-
-    listItem.appendChild(checkbox);
-    listItem.appendChild(textSpan);
-    listItem.appendChild(deleteBtn);
-
-    todoList.appendChild(listItem);
-    }
-
-
-
-     // Klick auf Button
-        addButton.addEventListener('click', addTodo);
-
-     // Enter-Taste im Input
-      todoInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') addTodo();
-        });
-        // Lade gespeicherte Aufgaben beim Start
-        loadTodos();
+loadTodos();
 

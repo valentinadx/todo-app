@@ -1,41 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #todo-app {
-      max-width: 400px;
-      margin: auto;
-    }
-    input[type="text"] {
-      width: 70%;
-      padding: 8px;
-      margin-right: 5px;
-    }
-    button {
-      padding: 8px 12px;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-top: 20px;
-    }
-    li {
-      background: #f0f0f0;
-      margin-bottom: 5px;
-      padding: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    li button {
-      background: red;
-      color: white;
-      border: none;
-      padding: 4px 8px;
-      cursor: pointer;
-    }
-      .completed {
+#todo-app {
+  max-width: 400px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 8px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px 12px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: #f0f0f0;
+  margin-bottom: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.completed {
   text-decoration: line-through;
   opacity: 0.6;
 }
