@@ -1,0 +1,44 @@
+Script started on 2026-01-09 14:27:45+01:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="153" LINES="38"]
+[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git push origin main
+[?2004lerror: src refspec main does not match any
+[31merror: failed to push some refs to 'github.com:valentinadx/todo-app'
+[m[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git add .
+[?2004l[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ 
+[?2004l[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git commit -m "Add initial pro[Koject file"
+[?2004l[master 5023642] Add initial project file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 loaded
+[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git push origin main
+[?2004lerror: src refspec main does not match any
+[31merror: failed to push some refs to 'github.com:valentinadx/todo-app'
+[m[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ [7m git push --set-upstream origin master[27m git push --set-upstream origin master
+[?2004lEnter passphrase for key '/home/valentina/.ssh/id_ed25519': 
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 14 threads
+Compressing objects:  50% (1/2)Compressing objects: 100% (2/2)Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 348 bytes | 348.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:valentinadx/todo-app
+   7911531..5023642  master -> master
+branch 'master' set up to track 'origin/master'.
+[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git add .
+[?2004l[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ git commit -m "Layout Changes"
+[?2004l[master abadfd5] Layout Changes
+ 1 file changed, 31 insertions(+), 2 deletions(-)
+[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ [7m git push --set-upstream origin master[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C git push --set-upstream origin master
+[A
+[?2004lEnter passphrase for key '/home/valentina/.ssh/id_ed25519': 
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 14 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 873 bytes | 436.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:valentinadx/todo-app
+   5023642..abadfd5  master -> master
+branch 'master' set up to track 'origin/master'.
+[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-app[01;32mvalentina@HH-KPdc13jhaJt9[00m:[01;34m~/todo-app[00m$ [7mgit add index.html style.css script.js[27mgit add index.html style.css script.js
+[?2004l[?2004h]0;valentina@HH-KPdc13jhaJt9: ~/todo-a
